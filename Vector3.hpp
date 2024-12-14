@@ -15,7 +15,7 @@ namespace PhysStep {
             this->z = z;
         }
 
-        Vector3(double[3] a)
+        Vector3(double a[3])
         {
             x = a[0];
             y = a[1];

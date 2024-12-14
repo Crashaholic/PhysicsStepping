@@ -1,8 +1,10 @@
 #include <iostream>
 
 #include <string>
+#include "Physics.hpp"
 
 using PhysStep::Vector3;
+using PhysStep::MyObject;
 
 // there's no dt here since we are going frame by frame
 
@@ -13,7 +15,7 @@ double calcDt()
 	return 1.0 / framerate;
 }
 
-double update()
+void update()
 {
     double currentDt = calcDt();
 
@@ -22,7 +24,7 @@ double update()
 int main(int argc, char** args)
 {
     MyObject obj;
-	obj.SetPosition(Vector3::zero());
+	obj.position = Vector3::zero();
 	double miu = 0.0;
 
 	while (1)

@@ -5,15 +5,16 @@
 
 namespace PhysStep {
     struct MyObject {
-        Vector3 pos;
-        Vector3 vel;
+        Vector3 position;
+        Vector3 velolcity;
         double mass;
 
-        MyObject();
-
-        void SetMass(double mass);
-        void SetVelocity(Vector3 v);
-        void SetPosition(Vector3 p);
+        MyObject()
+        {
+            position = Vector3::zero();
+            velolcity = Vector3::zero();
+            mass = 0.0;
+        }
     };
 }
 
